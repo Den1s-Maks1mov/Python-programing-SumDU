@@ -1,0 +1,5 @@
+string = input("Введіть речення: ")
+words = string.lower().split()
+word_count = dict((word, words.count(word)) for word in words)
+unique_words = list(filter(lambda word: word_count[word] == 1, words))
+print("Слова, які не повторюються: ", " ".join(unique_words))
